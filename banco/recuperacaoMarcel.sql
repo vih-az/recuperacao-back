@@ -21,3 +21,5 @@ create table tarefasUsuario(
      foreign key(tarefasId) references tarefas(idTarefas),
      foreign key(usuarioId) references usuario(idUsuario)
 );
+ insert into tarefas(tituloTarefas, descricaoTarefa, dataInicio, dataFim, statusT)values("teste", "teste", "2024-03-01", null, "a fazer");
+ select * from tarefas;
