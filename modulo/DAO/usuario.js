@@ -4,8 +4,10 @@ const pegarUsuario = async function(){
     try{
         let sql = `select * from usuario`
     let resultadoUsuario = await prisma.$queryRawUnsafe(sql)
+    console.log(resultadoUsuario)
     return resultadoUsuario
     }catch(error){
+        console.log(error)
         return false
     }
 }
