@@ -23,3 +23,11 @@ create table tarefasUsuario(
 );
  insert into tarefas(tituloTarefas, descricaoTarefa, dataInicio, dataFim, statusT)values("teste", "teste", "2024-03-01", null, "a fazer");
  select * from tarefas;
+ insert into tarefasUsuario(
+ tarefasId, usuarioId)values
+ (2,3),
+ (3,3);
+ select * from tarefasUsuario;
+ select tarefas.tituloTarefas, tarefas.descricaoTarefa, tarefas.dataInicio, tarefas.dataFim, tarefas.statusT, usuario.nomeUsuario, usuario.emailUsuarios, usuario.senhaUsuario from tarefasUsuario inner join tarefas on tarefasUsuario.tarefasId = tarefas.idTarefas inner join usuario on tarefasUsuario.usuarioId = usuario.idUsuario;
+ select tarefas.tituloTarefas, tarefas.descricaoTarefa, tarefas.dataInicio, tarefas.dataFim, tarefas.statusT from tarefasUsuario inner join tarefas on tarefasUsuario.tarefasId=tarefas.idTarefas inner join usuario on tarefasUsuario.usuarioId=usuario.idUsuario where usuario.idUsuario= 3;
+ delete from tarefasUsuario where idTarefasUsuario = 8;
